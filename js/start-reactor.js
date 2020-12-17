@@ -23,7 +23,8 @@ startReactor = {
 
         loadAudios() {
 
-            if (typeof(startReactor.audio.start) == "object") return
+            audioIsAlreadyLoaded = typeof(startReactor.audio.start) == "object"
+            if (audioIsAlreadyLoaded) return
 
             startReactor.audio.start = startReactor.audio.loadAudio(startReactor.audio.start)
             startReactor.audio.complete = startReactor.audio.loadAudio(startReactor.audio.complete)
